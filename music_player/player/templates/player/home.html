@@ -1,0 +1,53 @@
+{% extends 'player/base.html' %}
+{% block title %}Python Music Player{% endblock %}
+
+{% block content %}
+<h2 class="mb-4">🎵 Music Library</h2>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  {% for song in songs %}
+    <div class="col">
+      <!-- Card -->
+      <div class="card h-100 text-white shadow position-relative"
+           style="background-image: url('{{ song.cover_image.url }}');
+                  background-size: cover;
+                  background-position: center;
+                  height: 300px;">
+        <!-- Clickable Overlay -->
+        <a href="#" class="stretched-link" data-bs-toggle="modal" data-bs-target="#songModal{{ song.id }}"></a>
+
+        <!-- Content Overlay -->
+        <div class="card-body d-flex flex-column justify-content-end" style="background: rgba(0,0,0,0.5); border-radius: 10px;">
+          <h5 class="card-title">{{ song.title }}</h5>
+          <p class="card-text"><strong>{{ song.artist }}</strong></p>
+          <audio controls class="w-100 mt-2" style="z-index: 5; position: relative;">
+            <source src="{{ song.audio_file.url }}" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="songModal{{ song.id }}" tabindex="-1" aria-labelledby="songModalLabel{{ song.id }}" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-header border-0">
+              <h5 class="modal-title">{{ song.title }} - {{ song.artist }}</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="{{ song.cover_image.url }}" class="img-fluid mb-3 rounded shadow" style="max-height: 300px;">
+              <audio controls class="w-100">
+                <source src="{{ song.audio_file.url }}" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  {% empty %}
+    <p>No songs available.</p>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'player/base.html' %}
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+  <div class="card shadow p-4" style="width: 100%; max-width: 400px;">
+    <h2 class="text-center mb-4">Login</h2>
+
+    <form method="POST">
+      {% csrf_token %}
+      {% if error %}
+        <div class="alert alert-danger">{{ error }}</div>
+      {% endif %}
+      {{ form.non_field_errors }}
+      <div class="mb-3">
+        {{ form.username.label_tag }} {{ form.username }}
+      </div>
+      <div class="mb-3">
+        {{ form.password.label_tag }} {{ form.password }}
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Login</button>
+    </form>
+
+    <div class="mt-3 text-center">
+      <p class="mb-0">Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
+    </div>
+  </div>
+</div>
+{% endblock %}
