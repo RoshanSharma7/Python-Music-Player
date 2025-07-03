@@ -1,6 +1,6 @@
 # Django Music Player
 
-A fully functional music player web application built with Django. This project allows users to first register and login in to music player and upload the song according to the user mood and test, And playing the song. In this music player there is two song window one are small and other one are pop-up song window, we can use the both for playing the song. Here are managed are song very easily, make favorites with an intuitive and responsive interface.
+A fully functional music player web application built with Django. This project allows users to first register and log in to the music player and upload the song according to the user mood and test, And playing the song. In this music player, there is two song windows, one are small and the other one are pop-up song window. We can use both for playing the song. Here, songs are managed are song very easily, and make favorites with an intuitive and responsive interface.
 
 ---
 
@@ -131,7 +131,8 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 ---
 
 ## Contact:
-
+### About Me.
+### Roshan Sharma | Software Engineer | Boxer
 For questions or Support, Contact on
 - **GitHub**: [RoshanSharma7](https://github.com/RoshanSharma7)
 - **LinkedIn**: [RoshanSharma7](https://www.linkedin.com/in/roshan-sharma7)
@@ -142,8 +143,8 @@ For questions or Support, Contact on
 
 ## License:
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. Please take a look at the [LICENSE](License.md) file for details.
 
 ---
 
-This README file is structured to give a comprehensive overview of the project, instructions for running it, and potential improvements.
+This README file is structured to provide a comprehensive overview of the project, instructions for running it, and potential areas for improvement.
