@@ -1,6 +1,6 @@
 # Django Music Player
 
-A fully functional music player web application built with Django. This project allows users to first register and log in to the music player and upload the song according to the user mood and test, And playing the song. In this music player, there is two song windows, one are small and the other one are pop-up song window. We can use both for playing the song. Here, songs are managed are song very easily, and make favorites with an intuitive and responsive interface.
+A fully functional music player web application built with Django. This project allows users to first register and log in to the music player and upload the song according to the user mood and test, And playing the song. In this music player, there are two song windows: one is small and the other is a pop-up song window. We can use both for playing the song. Here, songs are managed are song very easily, and make favorites with an intuitive and responsive interface.
 
 ---
 
